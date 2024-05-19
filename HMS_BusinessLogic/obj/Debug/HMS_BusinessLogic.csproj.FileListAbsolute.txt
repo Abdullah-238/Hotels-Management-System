@@ -1,0 +1,9 @@
+D:\C_Sharp\HMS_BusinessLogic\bin\Debug\HMS_BusinessLogic.dll
+D:\C_Sharp\HMS_BusinessLogic\bin\Debug\HMS_BusinessLogic.pdb
+D:\C_Sharp\HMS_BusinessLogic\bin\Debug\HMS_DataAccess.dll
+D:\C_Sharp\HMS_BusinessLogic\bin\Debug\HMS_DataAccess.pdb
+D:\C_Sharp\HMS_BusinessLogic\obj\Debug\HMS_BusinessLogic.csproj.AssemblyReference.cache
+D:\C_Sharp\HMS_BusinessLogic\obj\Debug\HMS_BusinessLogic.csproj.CoreCompileInputs.cache
+D:\C_Sharp\HMS_BusinessLogic\obj\Debug\HMS_BusinessLogic.dll
+D:\C_Sharp\HMS_BusinessLogic\obj\Debug\HMS_BusinessLogic.pdb
+D:\C_Sharp\HMS_BusinessLogic\obj\Debug\HMS_Busi.583AF923.Up2Date
