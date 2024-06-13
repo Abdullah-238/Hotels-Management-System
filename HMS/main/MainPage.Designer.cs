@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainPage));
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.bookRoomToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.bookingsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -139,6 +140,7 @@
             // 
             // staticesToolStripMenuItem
             // 
+            this.staticesToolStripMenuItem.Image = global::HMS.Properties.Resources.stock_market;
             this.staticesToolStripMenuItem.Name = "staticesToolStripMenuItem";
             this.staticesToolStripMenuItem.Size = new System.Drawing.Size(274, 30);
             this.staticesToolStripMenuItem.Text = "Statistics";
@@ -249,6 +251,7 @@
             this.Controls.Add(this.ctrlInfo2);
             this.Controls.Add(this.ctrlInfo1);
             this.Controls.Add(this.menuStrip1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "MainPage";
             this.Text = "Hotels Managements System";

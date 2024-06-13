@@ -1,7 +1,19 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "D:\\C_Sharp\\HMS-Project\\HMS\\",
-  "Documents": [],
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{453EED83-BE1B-4FAC-822B-9032DB7306C8}|..\\HMS_DataAccess\\HMS_DataAccess.csproj|d:\\c_sharp\\hms-project\\hms_dataaccess\\clsusersdata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{34D4B74F-F1D1-4A5B-9919-AB316BF8DE38}|HMS.csproj|d:\\c_sharp\\hms-project\\hms\\users\\frmuserslist.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{34D4B74F-F1D1-4A5B-9919-AB316BF8DE38}|HMS.csproj|solutionrelative:users\\frmuserslist.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{34D4B74F-F1D1-4A5B-9919-AB316BF8DE38}|HMS.csproj|d:\\c_sharp\\hms-project\\hms\\users\\frmuserinfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{34D4B74F-F1D1-4A5B-9919-AB316BF8DE38}|HMS.csproj|solutionrelative:users\\frmuserinfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
@@ -9,11 +21,48 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": -1,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{b1e99781-ab81-11d0-b683-00aa00a3ee26}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "clsUsersData.cs",
+              "DocumentMoniker": "D:\\C_Sharp\\HMS-Project\\HMS_DataAccess\\clsUsersData.cs",
+              "RelativeDocumentMoniker": "..\\HMS_DataAccess\\clsUsersData.cs",
+              "ToolTip": "D:\\C_Sharp\\HMS-Project\\HMS_DataAccess\\clsUsersData.cs",
+              "RelativeToolTip": "..\\HMS_DataAccess\\clsUsersData.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABkAAABdAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-13T12:00:02.294Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "frmUsersList.cs [Design]",
+              "DocumentMoniker": "D:\\C_Sharp\\HMS-Project\\HMS\\Users\\frmUsersList.cs",
+              "RelativeDocumentMoniker": "Users\\frmUsersList.cs",
+              "ToolTip": "D:\\C_Sharp\\HMS-Project\\HMS\\Users\\frmUsersList.cs [Design]",
+              "RelativeToolTip": "Users\\frmUsersList.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-13T11:59:53.208Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "frmUserInfo.cs [Design]",
+              "DocumentMoniker": "D:\\C_Sharp\\HMS-Project\\HMS\\Users\\frmUserInfo.cs",
+              "RelativeDocumentMoniker": "Users\\frmUserInfo.cs",
+              "ToolTip": "D:\\C_Sharp\\HMS-Project\\HMS\\Users\\frmUserInfo.cs [Design]",
+              "RelativeToolTip": "Users\\frmUserInfo.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-13T11:59:52.003Z",
+              "EditorCaption": " [Design]"
             }
           ]
         }

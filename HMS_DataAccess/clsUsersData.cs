@@ -23,8 +23,7 @@ namespace HMS_DataAccess
                                     ELSE 'Female' 
                                     end , isActive from users
                                     join People on People.PersonID = users.PersonID   
-                                    join Countries on Countries.CountryID = People.CountryID
-                                    where isActive = 1";
+                                    join Countries on Countries.CountryID = People.CountryID ";
 
                     using (SqlCommand Command = new SqlCommand(query, Connection))
                     {

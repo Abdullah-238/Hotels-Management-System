@@ -1,9 +1,11 @@
-﻿using HMS_BusinessLogic;
+﻿using HMS.Global;
+using HMS_BusinessLogic;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -13,17 +15,20 @@ namespace HMS
 {
     public partial class frmHotelSettings : Form
     {
-        clsHotelSettings HotelSettings = clsHotelSettings.Find();
+        clsHotelSettings _HotelSettings = clsHotelSettings.Find();
 
         public frmHotelSettings()
         {
             InitializeComponent();
         }
 
-     
-
         private void btnSave_Click(object sender, EventArgs e)
         {
+
+            if (!_handleHotelsImage())
+                return ;
+
+
             if (!this.ValidateChildren())
             {
                 MessageBox.Show("Some Feilds are empty , " +
@@ -42,7 +47,7 @@ namespace HMS
                  ImageLocation = pcHotelImage.ImageLocation;
 
 
-            if (HotelSettings == null)
+            if (_HotelSettings == null)
             {
                 if (clsHotelSettings.AddNew(HotelName,HoursArrive, HourDeparture,
                     ImageLocation,Address,Phone))
@@ -65,6 +70,45 @@ namespace HMS
         
         }
            
+        public bool _handleHotelsImage()
+        {
+            if (_HotelSettings.ImagePath != pcHotelImage.ImageLocation)
+            {
+                if (_HotelSettings.ImagePath != "")
+                {
+                    try
+                    {
+                        File.Delete(_HotelSettings.ImagePath);
+                    }
+                    catch 
+                    { 
+
+                    }
+                }
+                if(pcHotelImage.ImageLocation != null)
+                {
+                    string currentDirectory = System.IO.Directory.GetCurrentDirectory();
+
+                    string DestinationFolder = currentDirectory + @"-Images\";
+
+                    string SourceFile = pcHotelImage.ImageLocation.ToString();
+                    try
+                    {
+                        clsUtil.CopyImageToProjectImagesFolder(ref SourceFile, DestinationFolder);
+
+                        pcHotelImage.ImageLocation = SourceFile;
+
+                        return true;
+                    }
+                    catch
+                    {
+                        MessageBox.Show("Error Copying Image File", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        return false;
+                    }
+                }
+            }
+            return true;
+        }
 
         private void btnClose_Click(object sender, EventArgs e)
         {
@@ -74,20 +118,20 @@ namespace HMS
         private void frmTimeSettings_Load(object sender, EventArgs e)
         {
 
-            if (HotelSettings != null)
+            if (_HotelSettings != null)
             {
-                nupArriaveTime.Value = HotelSettings.ArriveTime;
+                nupArriaveTime.Value = _HotelSettings.ArriveTime;
 
-                nupDepartureTime.Value =HotelSettings.DepartureTime;
+                nupDepartureTime.Value =_HotelSettings.DepartureTime;
 
-                txtHotelName.Text = HotelSettings.HotelName;
+                txtHotelName.Text = _HotelSettings.HotelName;
 
-                txtPhone.Text = HotelSettings.Phone;
+                txtPhone.Text = _HotelSettings.Phone;
 
-                txtAddress.Text = HotelSettings.Address;
+                txtAddress.Text = _HotelSettings.Address;
 
-                if (HotelSettings.ImagePath != "")
-                    pcHotelImage.ImageLocation = HotelSettings.ImagePath; 
+                if (_HotelSettings.ImagePath != "")
+                    pcHotelImage.ImageLocation = _HotelSettings.ImagePath; 
             }    
         }
 

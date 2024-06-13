@@ -36,9 +36,11 @@ namespace HMS.Login
                 {
 
                     txtUserName.Focus();
-                    MessageBox.Show("Your accound is not Active, Contact Admin.", "In Active Account", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("Your account is not Active, Contact Admin.", "In Active Account", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     return;
                 }
+
+             
 
                 clsGlobal.CurrentUser = user;
                 this.Hide();
@@ -50,7 +52,7 @@ namespace HMS.Login
             else
             {
                 txtUserName.Focus();
-                MessageBox.Show("Invalid Username/Password.", "Wrong Credintials", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Invalid Username/Password.", "Wrong Credentials", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
 
         }

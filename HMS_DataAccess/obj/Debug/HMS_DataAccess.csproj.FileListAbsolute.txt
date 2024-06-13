@@ -4,3 +4,9 @@ D:\C_Sharp\HMS_DataAccess\obj\Debug\HMS_DataAccess.csproj.AssemblyReference.cach
 D:\C_Sharp\HMS_DataAccess\obj\Debug\HMS_DataAccess.csproj.CoreCompileInputs.cache
 D:\C_Sharp\HMS_DataAccess\obj\Debug\HMS_DataAccess.dll
 D:\C_Sharp\HMS_DataAccess\obj\Debug\HMS_DataAccess.pdb
+D:\C_Sharp\HMS-Project\HMS_DataAccess\bin\Debug\HMS_DataAccess.dll
+D:\C_Sharp\HMS-Project\HMS_DataAccess\bin\Debug\HMS_DataAccess.pdb
+D:\C_Sharp\HMS-Project\HMS_DataAccess\obj\Debug\HMS_DataAccess.csproj.AssemblyReference.cache
+D:\C_Sharp\HMS-Project\HMS_DataAccess\obj\Debug\HMS_DataAccess.csproj.CoreCompileInputs.cache
+D:\C_Sharp\HMS-Project\HMS_DataAccess\obj\Debug\HMS_DataAccess.dll
+D:\C_Sharp\HMS-Project\HMS_DataAccess\obj\Debug\HMS_DataAccess.pdb

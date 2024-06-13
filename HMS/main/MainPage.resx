@@ -120,4 +120,51 @@
   <metadata name="menuStrip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>
   </metadata>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        AAABAAEAGBgAAAEAIACICQAAFgAAACgAAAAYAAAAMAAAAAEAIAAAAAAAAAkAABILAAASCwAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACurq4Arq6uArCw
+        sCmoqKiIjIyMdpqamg+NjY0A////AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAr6+vAK6urgOvr68us7OziL6+vtzIx8j+oaGh+YODg62MjIwx////Abi4
+        uAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAWFhYALGxsQCtra0GsLCwObS0
+        tJi+vr7mzMzM/9LS0v/Hx8f/qqqq/6Wkpf+Kiorhg4ODbaCgoA6NjY0A////AAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAMbGxgCdnZ0Ap6enC6Kiokizs7Omv7+/7crKyv/Nzc3/zMzM/9TT1P/W1tb/tra2/56e
+        nv+gn6D/kpKS+oKCgrCOjo4z////Abm5uQAAAAAAAAAAAAAAAACsrKwAs7OzALGxsQ+vr69UoKCgtZyc
+        nPSurq7/ycjJ/8nJyf/Pz8//zMzM/7W0tP+2tbX/rq2t/8XExP+enp7/k5KS/5SUlP+Dg4PihISEbaGh
+        oQsAAAAAr6+vAN3c3QCxsbEWsrKyYba2tsG9vb33sLCw/5qamv+enp7/u7u7/8HAwP+op6f/kpCQ/5OS
+        kv+ura3/r6+u/87Ozv+2tbX/n56f/4aFhv+NjI3/i4qL6ZWVlTqvr68BsbGxHrOzs3C2tbXMu7u7+8C/
+        wP/BwMH/v7+//6mpqf+cm5v/oJ+e/5COjf+TkpH/j42N/6Wko/+xsbD/rq6u/8/Ozv+5uLf/s7Ky/4uK
+        iv+FhIXvnZ2dc66urguzs7NNtbS02Li4uP27urv/vLy8/728vP+4t7f/qKen/5qZmf+WmZr/oJ+f/5yb
+        m/+hoJ//lZOS/5iXlv+ura3/ra2t/87Ozf+5uLf/s7Oz/5CQkMienZ5ArKusBqempwC0tLRAtrW2yLW0
+        tfy5ubn/sbCw/56dnP+SkJD/kZCP/5mZmf+Xm53/paSk/52cm/+Qjo3/jIuK/4mHhv+qqan/ra2t/87N
+        zf+5t7f/tLSz/5WVlZsAAAAAs7OzAAAAAACzsbIAsbGxFa6trm66urrjoqGh/5WTk/+enZz/nZyc/6Wk
+        pP+hoJ//lJOS/4mHhv+KiIf/ioiH/5iXlv+trKz/rKys/83MzP+4t7b/tLS0/5WVlZ////8AsrKyAAAA
+        AAAAAAAAsLGwAIWFhQLAwMClqaio/6qoqP+npaX/lJKS/5COjf+LiYj/i4mI/4+Ojf+ZmJf/k5KR/6em
+        pf+xsbD/rKys/8zMy/+4t7b/tbS0/5WVlaP///8BsrKyAAAAAAAAAAAAsrKyAJKSkgLBwcGnpaOk/6Cd
+        nv+XlJT/l5SU/5ORkf+Yl5f/mJaW/6Sjo/+lpKT/np2c/5+dnf+ysbH/q6ur/8zLy/+4trb/tbW1/5WV
+        lafv7+8CsrKyAAAAAAAAAAAAsrKyAKKiogPBwcGroJ6e/5mWlv+hnp//qKWm/6qnqP+0srP/qaio/6in
+        pv+gn57/oqCf/6Cenf+1tLT/q6ur/8vKyv+3trX/tbW1/5aWlqvT09MDsrKyAAAAAAAAAAAAsrKyAKqq
+        qgTAwMCwpKOj/6alpf+ysLH/srCw/7e1tf+9u7v/xMLD/8C/vv+vra3/qKen/6moqP+6urn/q6uq/8rK
+        yf+3trX/trW1/5aWlq/ExMQEsrKyAAAAAAAAAAAAsrKyAK+vrwXAwMC0q6qq/7GwsP+xsK//tLKy/768
+        vf/Jx8j/1NLS/9zb2//d3d3/zMvL/769vf/CwcH/q6ur/8rKyf+3trX/trW1/5aWl7K6uroFsrKyAAAA
+        AAAAAAAAs7OzALOzswfAwMC4r66t/7Szsv+zsbH/s7Gx/7++vf/My8v/3t3d/+rq6v/19PT/+fn5/93d
+        3f+4uLj/j4+O/7q6uf+3trX/tra2/5eXl7azs7MGsbGxAAAAAAAAAAAAs7OzALW1tQjAwMC8s7Ky/7e2
+        tf+ysbH/tbW0/7y8u//Lysr/39/f/+bl5f/W1tb/sLCw/5CQkP+Wlpb/fX19/3p5ef+WlpX/tbS0/5iY
+        mLqurq4HsLCwAAAAAAAAAAAAs7OzALe3twnAwMDAsrKy/7i4t/+/v77/xcTE/8jHx/+7u7r/qamp/5OT
+        kv+Dg4P/g4KC/4aFhv+OjY7/i4qL/21rbP9sbGz/n5+f/4uLi7+urq4Kra2tAAAAAAAAAAAAtLS0ALm5
+        uQvAwMDDvLy8/8nJyP/DwsL/r6+u/5WVlf+Ghob/g4KD/4aFhf+HhYf/f31+/3RydP9pZ2n/Y2Fi/2Jg
+        YfptbG3ojo6O/XJyctGampoToaGhAAAAAAAAAAAAsbGxALW2thO1tbXQrq6u/56enf+JiYn/goKC/4SD
+        hP+GhIX/f35//3VzdP9qaGn/ZGFj/2JgYvpnZmfccG9woX18fVmbm5s1s7OzrKGhoaWYmJgPpKSkAAAA
+        AAAAAAAAq6urAKysrCOdnZ3kf39//4B/f/+Eg4T/fnx+/3RydP9qaGn/Y2Fj/2JhYvloZmfZcW9wnX59
+        flaTk5MeysvKA7O0swC3t7cAwsLCCs/PzwoAAAAA1NTUAAAAAAAAAAAArq6uAK2trRKzs7OXmJiYp359
+        fqtzcXLwYmFi/2FgYfhnZmfWcXBwmX59flOVlZUczs/OA7e4twAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAA////AMDAwADExMQE2NjYA6+vrwWbm5ufgICA/3p6eo6dnZ0X2drZAsHC
+        wQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAtbW1AL6+vgC4uLhFt7e3pKWlpTqgoKAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD/+D8A/+APAP+ABwD+AAEA+AAAAOAAAAAAAAAAAAABAAAA
+        BwCAAAcAwAADAMAAAwDAAAMAwAADAMAAAwDAAAMAwAADAMAAAwDAAAMAwAADAMAAZwDAA/8A4B//APx/
+        /wA=
+</value>
+  </data>
 </root>
