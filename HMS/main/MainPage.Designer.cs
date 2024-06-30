@@ -43,6 +43,7 @@
             this.changePasswordToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.signOutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.signOutToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.ctrlCurrencyEchange1 = new HMS.main.ctrlCurrencyEchange();
             this.ctrlMainInfo1 = new HMS.main.Controls.ctrlMainInfo();
             this.ctrlInfo3 = new HMS.Main.ctrlInfo();
@@ -188,6 +189,10 @@
             this.signOutToolStripMenuItem1.Text = "Sign out";
             this.signOutToolStripMenuItem1.Click += new System.EventHandler(this.signOutToolStripMenuItem1_Click);
             // 
+            // openFileDialog1
+            // 
+            this.openFileDialog1.FileName = "openFileDialog1";
+            // 
             // ctrlCurrencyEchange1
             // 
             this.ctrlCurrencyEchange1.AutoValidate = System.Windows.Forms.AutoValidate.EnableAllowFocusChange;
@@ -214,7 +219,9 @@
             // 
             // ctrlInfo3
             // 
+            this.ctrlInfo3.BackColor = System.Drawing.Color.Red;
             this.ctrlInfo3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ctrlInfo3.InfoType = HMS.Main.ctrlInfo.enInfoType.RoomsInfoByPercentage;
             this.ctrlInfo3.Location = new System.Drawing.Point(541, 125);
             this.ctrlInfo3.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
             this.ctrlInfo3.Name = "ctrlInfo3";
@@ -223,7 +230,9 @@
             // 
             // ctrlInfo2
             // 
+            this.ctrlInfo2.BackColor = System.Drawing.Color.CadetBlue;
             this.ctrlInfo2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ctrlInfo2.InfoType = HMS.Main.ctrlInfo.enInfoType.AvailableRooms;
             this.ctrlInfo2.Location = new System.Drawing.Point(275, 125);
             this.ctrlInfo2.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
             this.ctrlInfo2.Name = "ctrlInfo2";
@@ -232,7 +241,9 @@
             // 
             // ctrlInfo1
             // 
+            this.ctrlInfo1.BackColor = System.Drawing.Color.DarkOliveGreen;
             this.ctrlInfo1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ctrlInfo1.InfoType = HMS.Main.ctrlInfo.enInfoType.RoomsInfo;
             this.ctrlInfo1.Location = new System.Drawing.Point(2, 125);
             this.ctrlInfo1.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
             this.ctrlInfo1.Name = "ctrlInfo1";
@@ -285,6 +296,7 @@
         private System.Windows.Forms.ToolStripMenuItem signOutToolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem currentUserInfoToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem staticesToolStripMenuItem;
+        private System.Windows.Forms.OpenFileDialog openFileDialog1;
     }
 }
 

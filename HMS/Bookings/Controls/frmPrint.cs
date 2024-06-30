@@ -16,5 +16,10 @@ namespace HMS.Bookings.Controls
         {
             InitializeComponent();
         }
+
+        private void frmPrint_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

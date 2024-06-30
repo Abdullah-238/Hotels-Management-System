@@ -5,12 +5,14 @@ using HMS.Rooms;
 using HMS.RoomTypes;
 using HMS.Statistics;
 using HMS.Users;
+using Microsoft.Win32;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -20,6 +22,7 @@ namespace HMS
     public partial class MainPage : Form
     {
         frmLogin _Login; 
+
         public MainPage(frmLogin Login)
         {
             InitializeComponent();
@@ -39,9 +42,7 @@ namespace HMS
 
         private void MainPage_Load(object sender, EventArgs e)
         {
-            ctrlInfo1.LoadAllRoomsInfo();
-            ctrlInfo2.LoadAvailbaleRoomsInfo();
-            ctrlInfo3.LoadAllRoomsInfoByPersent();
+
             ctrlCurrencyEchange1.LoadCurrenciesExChange();
             ctrlMainInfo1.LoadMainInfo();
         }
@@ -75,9 +76,9 @@ namespace HMS
 
         private void bookRoomToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            frmRoomsList addNewBook = new frmRoomsList(); 
+            frmRoomsList BookList = new frmRoomsList();
 
-            addNewBook.ShowDialog();
+            BookList.ShowDialog();
 
             MainPage_Load(null, null);
         }
@@ -139,5 +140,6 @@ namespace HMS
 
             statistics.ShowDialog();
         }
+
     }
 }

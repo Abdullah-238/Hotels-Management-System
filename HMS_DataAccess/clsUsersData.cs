@@ -2,6 +2,7 @@
 using System.Data;
 using System.Data.SqlClient;
 using System.Diagnostics;
+using static HMS_DataAccess.clsGlobalDataAccess;
 
 namespace HMS_DataAccess
 {
@@ -282,7 +283,8 @@ namespace HMS_DataAccess
             }
             catch (Exception ex)
             {
-                clsGlobalDataAccess.WriteExceptionInLogFile(ex);
+                clsLog.LogToEventViewer.Log(ex.Message);
+                clsLog.LogToFile.Log(ex.Message);
             }
             finally
             {
@@ -319,7 +321,8 @@ namespace HMS_DataAccess
             }
             catch (Exception ex)
             {
-                clsGlobalDataAccess.WriteExceptionInLogFile(ex);
+                clsLog.LogToEventViewer.Log(ex.Message);
+                clsLog.LogToFile.Log(ex.Message);
             }
             finally
             {
@@ -354,7 +357,8 @@ namespace HMS_DataAccess
             }
             catch (Exception ex)
             {
-                clsGlobalDataAccess.WriteExceptionInLogFile(ex);
+                clsLog.LogToEventViewer.Log(ex.Message);
+                clsLog.LogToFile.Log(ex.Message);
             }
             finally
             {

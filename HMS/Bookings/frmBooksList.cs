@@ -83,6 +83,7 @@ namespace HMS.Bookings
 
             frmRoomsList RoomList = new frmRoomsList();
 
+
             RoomList.ShowDialog();
 
             _RefreshList();
@@ -181,12 +182,25 @@ namespace HMS.Bookings
 
             frmAddNewBook addUpdateRoom = new frmAddNewBook(BookID);
 
+            addUpdateRoom.OnBookingCompleted += AddUpdateRoom_OnBookingCompleted;
+
             addUpdateRoom._RoomID = (int)dgvBookings.CurrentRow.Cells[2].Value;
 
             addUpdateRoom.ShowDialog();
 
             _RefreshList();
         }
+
+        private void AddUpdateRoom_OnBookingCompleted(object sender, frmAddNewBook.CompleteBooking e)
+        {
+            notifyIcon1.Icon = SystemIcons.Application;
+            notifyIcon1.BalloonTipIcon = ToolTipIcon.Info;
+            notifyIcon1.BalloonTipText = "New booking added Successfully. Id : "+ e.Book.BookID;
+            notifyIcon1.BalloonTipTitle = "Done";
+            notifyIcon1.ShowBalloonTip(1000);
+        }
+
+      
 
         private void showDetailsToolStripMenuItem_Click(object sender, EventArgs e)
         {

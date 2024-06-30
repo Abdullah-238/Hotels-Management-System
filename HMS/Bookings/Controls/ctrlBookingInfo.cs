@@ -9,6 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using QRCoder;
+using System.IO;
 
 namespace HMS.Bookings
 {
@@ -118,15 +119,16 @@ namespace HMS.Bookings
 
             int NumbersOfDays = Book.DepartureDate.Day - Book.ArriveDate.Day; 
 
-            e.Graphics.DrawString("\tInvoce", new Font("Poppins", 20, FontStyle.Bold), Brushes.DarkCyan, 280, 30);
+            e.Graphics.DrawString("\tInvoice", new Font("Poppins", 20, FontStyle.Bold), Brushes.DarkCyan, 280, 30);
 
+            if (File.Exists( HotelSettings.ImagePath))
             e.Graphics.DrawImage(Image.FromFile(HotelSettings.ImagePath), 400, 100, 100, 100);
 
             e.Graphics.DrawString(
-                "\n" + HotelSettings.HotelName
+                "\t\t\n" + HotelSettings.HotelName
                 + "\t\t\n" + HotelSettings.Address
                 + "\t\t\n" + HotelSettings.Phone
-                , new Font("Arial", 16, FontStyle.Regular), Brushes.Black, 300, 200);
+                , new Font("Arial", 16, FontStyle.Regular), Brushes.Black, 350, 200);
 
             e.Graphics.FillRectangle(blueBrush, rect);
 

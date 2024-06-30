@@ -42,14 +42,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="HMS.exe" size="247744">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="HMS.exe" size="250304">
       <assemblyIdentity name="HMS" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>pZj9qNLuTc1URNaHkvIJZEBN7aUG5yylhiTjkRIx8KU=</dsig:DigestValue>
+        <dsig:DigestValue>vjUK3nck3MJToAF0TO6jJbW5tXwzJopHloO92v8xjV8=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -66,14 +66,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="HMS_DataAccess.dll" size="40448">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="HMS_DataAccess.dll" size="40960">
       <assemblyIdentity name="HMS_DataAccess" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>lbPUWWcb1VQghQxmiXyG/3YfCsZFbduxWLLrGmVMzJ0=</dsig:DigestValue>
+        <dsig:DigestValue>jGA5nbs/tktgnavVtl6NdA5lTJ/jU336BwqaiVt8dSw=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

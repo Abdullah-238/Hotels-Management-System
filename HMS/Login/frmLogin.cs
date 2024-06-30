@@ -2,12 +2,14 @@
 using HMS_BusinessLogic;
 using Microsoft.Win32;
 using System;
+using System.Diagnostics;
 using System.Windows.Forms;
 
 namespace HMS.Login
 {
     public partial class frmLogin : Form
     {
+
         public frmLogin()
         {
             InitializeComponent();
@@ -16,6 +18,8 @@ namespace HMS.Login
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
+
+
 
             clsUsers user = clsUsers.FindByUserNameAndPassword(txtUserName.Text.Trim(),
               clsUtil.ComputeHash(txtPassword.Text.Trim()));
@@ -40,7 +44,9 @@ namespace HMS.Login
                     return;
                 }
 
-             
+
+                ucProgressBar1.Visible = true;
+                ucProgressBar1.LoadProgress();
 
                 clsGlobal.CurrentUser = user;
                 this.Hide();
@@ -59,6 +65,7 @@ namespace HMS.Login
 
         private void frmLogin_Load(object sender, EventArgs e)
         {
+            ucProgressBar1.Visible = false;
 
             string UserName = ""; string Password = "";
 

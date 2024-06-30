@@ -43,6 +43,7 @@
             this.txtPassword = new System.Windows.Forms.TextBox();
             this.pictureBox8 = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.ucProgressBar1 = new HMS.Login.ucProgressBar();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -71,6 +72,7 @@
             // splitContainer1.Panel2
             // 
             this.splitContainer1.Panel2.BackColor = System.Drawing.Color.White;
+            this.splitContainer1.Panel2.Controls.Add(this.ucProgressBar1);
             this.splitContainer1.Panel2.Controls.Add(this.btnClose);
             this.splitContainer1.Panel2.Controls.Add(this.label7);
             this.splitContainer1.Panel2.Controls.Add(this.chkRememberMe);
@@ -243,6 +245,15 @@
             this.pictureBox3.TabIndex = 132;
             this.pictureBox3.TabStop = false;
             // 
+            // ucProgressBar1
+            // 
+            this.ucProgressBar1.BackColor = System.Drawing.Color.White;
+            this.ucProgressBar1.Location = new System.Drawing.Point(157, 197);
+            this.ucProgressBar1.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
+            this.ucProgressBar1.Name = "ucProgressBar1";
+            this.ucProgressBar1.Size = new System.Drawing.Size(252, 24);
+            this.ucProgressBar1.TabIndex = 136;
+            // 
             // frmLogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(13F, 25F);
@@ -286,5 +297,6 @@
         private System.Windows.Forms.PictureBox pictureBox8;
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private ucProgressBar ucProgressBar1;
     }
 }

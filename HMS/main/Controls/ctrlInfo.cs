@@ -19,21 +19,58 @@ namespace HMS.Main
             InitializeComponent();
         }
 
-
-        public void LoadAvailbaleRoomsInfo()
+        enInfoType _InfoType;
+        public enum enInfoType
         {
-            int NumberOfAvalibaleRooms = clsRooms.GetAllAvalibaleRooms();
+            AvailableRooms = 1 , RoomsInfo = 2 ,  RoomsInfoByPercentage = 3 
+        }
 
-            lbTitle.Text = "Avalibale Rooms";
+        public enInfoType InfoType
+        {
+            get
+            {
+                return _InfoType;
+            }
+            set
+            {
+                _InfoType = value;
 
-            lbInfo.Text = NumberOfAvalibaleRooms.ToString();
+                switch(_InfoType)
+                {
+                    case enInfoType.AvailableRooms:
+                        {
+                            LoadAvailableRoomsInfo();
+                        }
+                        break;
+                    case enInfoType.RoomsInfo:
+                        {
+                            LoadAllRoomsInfo();
+                        }
+                        break;
+                    case enInfoType.RoomsInfoByPercentage:
+                        {
+                            LoadAllRoomsInfoByPercentage();
+                        }
+                        break;
+                }
+            }
+        }
+
+
+         void LoadAvailableRoomsInfo()
+        {
+            int NumberOfAvailableRooms = clsRooms.GetAllAvalibaleRooms();
+
+            lbTitle.Text = "Available Rooms";
+
+            lbInfo.Text = NumberOfAvailableRooms.ToString();
 
             panel1.BackColor = Color.CadetBlue;
 
             BackColor = Color.CadetBlue;
 
         }
-        public void LoadAllRoomsInfo()
+         void LoadAllRoomsInfo()
         {
             int NumberRooms = clsRooms.GetNumbersOfRooms();
 
@@ -46,23 +83,21 @@ namespace HMS.Main
             BackColor = Color.DarkOliveGreen;
 
         }
-        public void LoadAllRoomsInfoByPersent()
+         void LoadAllRoomsInfoByPercentage()
         {
             float NumberOfAvalibaleRooms = clsRooms.GetAllAvalibaleRooms();
 
             float NumberRooms = clsRooms.GetNumbersOfRooms();
 
-            float PrecntageNumberOfavalibaleRooms = NumberOfAvalibaleRooms / NumberRooms;
+            float PeecentageNumberOfAvailableRooms = NumberOfAvalibaleRooms / NumberRooms;
 
-            PrecntageNumberOfavalibaleRooms *= 100;
-
-            PrecntageNumberOfavalibaleRooms = Convert.ToInt16(PrecntageNumberOfavalibaleRooms);
+            PeecentageNumberOfAvailableRooms *= 100;
 
             lbTitle.Text = "Availability rooms";
 
-            lbInfo.Text = PrecntageNumberOfavalibaleRooms.ToString() + "%";
+            lbInfo.Text = PeecentageNumberOfAvailableRooms.ToString() + "%";
 
-            if (PrecntageNumberOfavalibaleRooms > 50) 
+            if (PeecentageNumberOfAvailableRooms > 50) 
             {
                 panel1.BackColor = Color.Green; 
 

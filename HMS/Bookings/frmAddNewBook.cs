@@ -15,6 +15,29 @@ namespace HMS.Bookings
 {
     public partial class frmAddNewBook : Form
     {
+        public class CompleteBooking 
+        {
+            public clsBookings Book { get;  }
+
+            public CompleteBooking (clsBookings book)
+            {
+                this.Book = book; 
+            }  
+        }
+
+        public void RaiseOnBookingCompleted(clsBookings Book)
+        {
+            RaiseOnBookingCompleted(new CompleteBooking(Book));
+        }
+
+        protected virtual void RaiseOnBookingCompleted(CompleteBooking e)
+        {
+            OnBookingCompleted?.Invoke(this, e);
+        }
+
+        public event EventHandler<CompleteBooking> OnBookingCompleted;
+
+
         clsBookings Book;
 
         clsGuests Gust;
@@ -180,11 +203,21 @@ namespace HMS.Bookings
                 return true;
         }
 
+        void NotifyMessage ()
+        {
+            notifyIcon1.Icon = SystemIcons.Application;
+            notifyIcon1.BalloonTipIcon = ToolTipIcon.Info;
+            notifyIcon1.BalloonTipText = "New booking added Successfully";
+            notifyIcon1.BalloonTipTitle = "Done";
+            notifyIcon1.ShowBalloonTip(1000);
+        }
+
+
         private void btnSave_Click(object sender, EventArgs e)
         {
             if (!this.ValidateChildren())
             {
-                MessageBox.Show("Some Feilds are empty , Please Fill All required Feilds to continue",
+                MessageBox.Show("Some Fields are empty , Please Fill All required Fields to continue",
                     "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
@@ -192,20 +225,19 @@ namespace HMS.Bookings
 
             if (dtpArrive.Value.CompareTo(dtpDeparture.Value) >= 0)
             {
-                MessageBox.Show("Date of arravie can't be after Departure Date",
+                MessageBox.Show("Date of arrives can't be after Departure Date",
                     "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
 
                 if (!CreateNewGuest())
-                    return;
+                    return;;
 
-
-           
+            if (Mode != enMode.UpdateBook)
+            NotifyMessage();
 
             Book.RoomID = _RoomID;
             Book.GuestID = _GuestID;
-
             Book.ArriveDate = dtpArrive.Value;
             Book.DepartureDate = dtpDeparture.Value.Date;
             Book.BookType = Convert.ToByte(cbBookType.SelectedIndex);
@@ -216,15 +248,18 @@ namespace HMS.Bookings
 
             if (Book.Save())
             {
+                if (OnBookingCompleted != null)
+                    RaiseOnBookingCompleted(Book);
+
                 _BookID = Book.BookID; 
                 Mode = enMode.UpdateBook;
-                MessageBox.Show("Data Saved Succesfully", "Done", MessageBoxButtons.OK,
+                MessageBox.Show("Data Saved Successfully", "Done", MessageBoxButtons.OK,
                     MessageBoxIcon.Information);
                 _LoadData();
             }
             else
             {
-                MessageBox.Show("Data Saved Faild", "Errorr", MessageBoxButtons.OK,
+                MessageBox.Show("Data Saved Failed", "Error", MessageBoxButtons.OK,
                    MessageBoxIcon.Error);
             }
         }
@@ -268,7 +303,23 @@ namespace HMS.Bookings
                 }
             }
         }
+       
+
+        private void notifyIcon1_BalloonTipClicked(object sender, EventArgs e)
+        {
+
+            frmBookInfo bookInfo = new frmBookInfo(_BookID);
+
+            this.Close();
+
+            bookInfo.ShowDialog();
 
 
+        }
+
+        private void notifyIcon1_MouseDoubleClick(object sender, MouseEventArgs e)
+        {
+
+        }
     }
 }

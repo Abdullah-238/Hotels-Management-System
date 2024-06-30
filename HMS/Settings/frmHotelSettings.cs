@@ -167,5 +167,7 @@ namespace HMS
         {
             pcHotelImage.ImageLocation = null;
         }
+
+       
     }
 }
