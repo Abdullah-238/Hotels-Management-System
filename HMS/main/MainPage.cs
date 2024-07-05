@@ -5,17 +5,10 @@ using HMS.Rooms;
 using HMS.RoomTypes;
 using HMS.Statistics;
 using HMS.Users;
-using Microsoft.Win32;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Runtime.CompilerServices;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
+using Outlook = Microsoft.Office.Interop.Outlook;
+
 
 namespace HMS
 {
@@ -141,5 +134,53 @@ namespace HMS
             statistics.ShowDialog();
         }
 
+        private void applicationArchitectureToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmAllPages pages = new frmAllPages();
+
+            pages.ShowDialog();
+        }
+
+        private void sendEmailToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void sendImailToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                Outlook.Application outlookApp = new Outlook.Application();
+                Outlook.MailItem mailItem = (Outlook.MailItem)outlookApp.CreateItem(Outlook.OlItemType.olMailItem);
+                mailItem.Subject = "";
+                mailItem.To = "";
+                mailItem.Body = "";
+                mailItem.Importance = Outlook.OlImportance.olImportanceHigh;
+                mailItem.Display(false);
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Ok", MessageBoxButtons.OK);
+            }
+        }
+
+        private void changeWallpaperToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            openFileDialog1.Filter = "Image Files|*.jpg;*.jpeg;*.png;*.gif;*.bmp";
+            openFileDialog1.FilterIndex = 1;
+            openFileDialog1.RestoreDirectory = true;
+
+            if (openFileDialog1.ShowDialog() == DialogResult.OK)
+            {
+                string selectedFilePath = openFileDialog1.FileName;
+                pcWallpaper.Load(selectedFilePath);
+            }
+        }
+
+        private void removeHomeWallpaperToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            pcWallpaper.ImageLocation = null;
+        }
     }
 }

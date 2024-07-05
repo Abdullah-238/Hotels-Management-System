@@ -28,10 +28,15 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.btnClose = new System.Windows.Forms.Button();
             this.lblTitle = new System.Windows.Forms.Label();
-            this.dgvStatistics = new System.Windows.Forms.DataGridView();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvStatistics)).BeginInit();
+            this.chart1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            this.rbNumberofBookings = new System.Windows.Forms.RadioButton();
+            this.rbTotalPrices = new System.Windows.Forms.RadioButton();
+            ((System.ComponentModel.ISupportInitialize)(this.chart1)).BeginInit();
             this.SuspendLayout();
             // 
             // btnClose
@@ -41,7 +46,7 @@
             this.btnClose.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
             this.btnClose.Image = global::HMS.Properties.Resources.Close_321;
             this.btnClose.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnClose.Location = new System.Drawing.Point(448, 374);
+            this.btnClose.Location = new System.Drawing.Point(549, 524);
             this.btnClose.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(126, 48);
@@ -60,35 +65,64 @@
             this.lblTitle.Text = "Statistics";
             this.lblTitle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // dgvStatistics
+            // chart1
             // 
-            this.dgvStatistics.AllowUserToAddRows = false;
-            this.dgvStatistics.AllowUserToDeleteRows = false;
-            this.dgvStatistics.AllowUserToOrderColumns = true;
-            this.dgvStatistics.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvStatistics.Location = new System.Drawing.Point(12, 97);
-            this.dgvStatistics.Name = "dgvStatistics";
-            this.dgvStatistics.ReadOnly = true;
-            this.dgvStatistics.RowHeadersWidth = 51;
-            this.dgvStatistics.RowTemplate.Height = 26;
-            this.dgvStatistics.Size = new System.Drawing.Size(562, 255);
-            this.dgvStatistics.TabIndex = 196;
+            chartArea1.Name = "ChartArea1";
+            this.chart1.ChartAreas.Add(chartArea1);
+            legend1.Name = "Legend1";
+            this.chart1.Legends.Add(legend1);
+            this.chart1.Location = new System.Drawing.Point(28, 139);
+            this.chart1.Name = "chart1";
+            series1.ChartArea = "ChartArea1";
+            series1.Legend = "Legend1";
+            series1.Name = "Series1";
+            this.chart1.Series.Add(series1);
+            this.chart1.Size = new System.Drawing.Size(647, 367);
+            this.chart1.TabIndex = 196;
+            this.chart1.Text = "chart1";
+            // 
+            // rbNumberofBookings
+            // 
+            this.rbNumberofBookings.AutoSize = true;
+            this.rbNumberofBookings.Checked = true;
+            this.rbNumberofBookings.Location = new System.Drawing.Point(28, 93);
+            this.rbNumberofBookings.Name = "rbNumberofBookings";
+            this.rbNumberofBookings.Size = new System.Drawing.Size(225, 29);
+            this.rbNumberofBookings.TabIndex = 197;
+            this.rbNumberofBookings.TabStop = true;
+            this.rbNumberofBookings.Text = "Number of bookings";
+            this.rbNumberofBookings.UseVisualStyleBackColor = true;
+            this.rbNumberofBookings.CheckedChanged += new System.EventHandler(this.LoadChartsData);
+            // 
+            // rbTotalPrices
+            // 
+            this.rbTotalPrices.AutoSize = true;
+            this.rbTotalPrices.Location = new System.Drawing.Point(278, 93);
+            this.rbTotalPrices.Name = "rbTotalPrices";
+            this.rbTotalPrices.Size = new System.Drawing.Size(146, 29);
+            this.rbTotalPrices.TabIndex = 198;
+            this.rbTotalPrices.Text = "Total prices";
+            this.rbTotalPrices.UseVisualStyleBackColor = true;
+            this.rbTotalPrices.CheckedChanged += new System.EventHandler(this.LoadChartsData);
             // 
             // frmStatistics
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(586, 449);
-            this.Controls.Add(this.dgvStatistics);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
+            this.ClientSize = new System.Drawing.Size(703, 577);
+            this.Controls.Add(this.rbTotalPrices);
+            this.Controls.Add(this.rbNumberofBookings);
+            this.Controls.Add(this.chart1);
             this.Controls.Add(this.btnClose);
             this.Controls.Add(this.lblTitle);
+            this.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "frmStatistics";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmStatistics";
             this.Load += new System.EventHandler(this.frmStatistics_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dgvStatistics)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chart1)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -96,6 +130,8 @@
 
         private System.Windows.Forms.Button btnClose;
         private System.Windows.Forms.Label lblTitle;
-        private System.Windows.Forms.DataGridView dgvStatistics;
+        private System.Windows.Forms.DataVisualization.Charting.Chart chart1;
+        private System.Windows.Forms.RadioButton rbNumberofBookings;
+        private System.Windows.Forms.RadioButton rbTotalPrices;
     }
 }

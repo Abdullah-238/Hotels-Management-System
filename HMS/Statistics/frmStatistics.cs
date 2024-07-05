@@ -13,23 +13,44 @@ namespace HMS.Statistics
 {
     public partial class frmStatistics : Form
     {
+        public static DataTable dtAllStatices = clsStatistic.GetAllStatistic();
+
         public frmStatistics()
         {
             InitializeComponent();
         }
 
-        private void frmStatistics_Load(object sender, EventArgs e)
+        void LoadChartsData()
         {
-            dgvStatistics.DataSource = clsStatistic.GetAllStatistic();
-
-            if (dgvStatistics.Rows.Count > 0 )
+            if (rbTotalPrices.Checked)
             {
-                dgvStatistics.Columns[0].Width = 120;
-                dgvStatistics.Columns[1].Width = 120;
-                dgvStatistics.Columns[2].Width = 120;
-
+                chart1.Series[0].XValueMember = "Room Number";
+                chart1.Series[0].YValueMembers = "Total prices";
+                chart1.Series[0].Name = "Total prices";
+                chart1.Series[0].Color = Color.Green;
             }
 
+            if (rbNumberofBookings.Checked)
+            {
+                chart1.Series[0].XValueMember = "Room Number";
+                chart1.Series[0].YValueMembers = "Number Of Booking";
+                chart1.Series[0].Name = "Number Of Booking";
+                chart1.Series[0].Color = Color.Blue;
+
+            }
+        }
+
+
+        private void frmStatistics_Load(object sender, EventArgs e)
+        {
+            chart1.DataSource = dtAllStatices;
+
+            LoadChartsData();
+        }
+
+        private void LoadChartsData(object sender, EventArgs e)
+        {
+            LoadChartsData();
         }
     }
 }

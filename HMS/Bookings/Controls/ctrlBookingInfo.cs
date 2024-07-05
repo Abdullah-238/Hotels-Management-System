@@ -9,7 +9,9 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using QRCoder;
+using Word = Microsoft.Office.Interop.Word;
 using System.IO;
+using Microsoft.SqlServer.Server;
 
 namespace HMS.Bookings
 {
@@ -108,7 +110,27 @@ namespace HMS.Bookings
             if (_BookID == -1)
                 return;
 
-            printPreviewDialog1.ShowDialog();
+
+            printDocument1.Print();
+
+
+            //Word.Application wordApp = new Word.Application();
+
+            //wordApp.Visible = false;
+
+            
+
+            //Word.Document doc = wordApp.Documents.Add();
+            //Word.Paragraph para = doc.Paragraphs.Add();
+            //para.Range.Text =
+            //    "\t\t\n" + HotelSettings.HotelName
+            //    + "\t\t\n" + HotelSettings.Address
+            //    + "\t\t\n" + HotelSettings.Phone;
+
+
+            //doc.SaveAs2(filepath);
+            //doc.Close();
+            //doc.PrintOut();
         }
 
         private void printDocument1_PrintPage(object sender, System.Drawing.Printing.PrintPageEventArgs e)

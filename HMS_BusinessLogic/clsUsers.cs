@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace HMS_BusinessLogic
 {
-    public class clsUsers :clsPerson
+    public class clsUsers : clsPerson
     {
 
         enum enMode { AddNewUser, UpdateUser };
@@ -34,7 +34,7 @@ namespace HMS_BusinessLogic
         }
 
         clsUsers(int personID, int userID, string userName,
-            string password,  bool isActive , string name, byte gender,
+            string password, bool isActive, string name, byte gender,
             string phone, int iDNumber, int countryID)
         {
             this.PersonID = personID;
@@ -55,7 +55,7 @@ namespace HMS_BusinessLogic
 
         public static clsUsers Find(int userID)
         {
-            int personID    = -1;
+            int personID = -1;
             string userName = null;
             string password = null;
             bool isActive = false;
@@ -70,7 +70,7 @@ namespace HMS_BusinessLogic
                 return new clsUsers(personID, userID, userName, password, isActive,
                     Person.Name, Person.Gender, Person.Phone, Person.IDNumber, Person.CountryID);
             }
-           
+
             else
                 return null;
         }

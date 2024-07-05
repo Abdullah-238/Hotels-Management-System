@@ -85,3 +85,11 @@ D:\C_Sharp\HMS-Project\HMS\obj\Debug\HMS.csproj.Up2Date
 D:\C_Sharp\HMS-Project\HMS\obj\Debug\HMS.exe
 D:\C_Sharp\HMS-Project\HMS\obj\Debug\HMS.pdb
 D:\C_Sharp\HMS-Project\HMS\obj\Debug\HMS.Login.ucProgressBar.resources
+D:\C_Sharp\HMS-Project\HMS\obj\Debug\HMS.frmAllPages.resources
+D:\C_Sharp\HMS-Project\HMS\bin\Debug\Microsoft.Win32.Registry.dll
+D:\C_Sharp\HMS-Project\HMS\bin\Debug\System.Security.AccessControl.dll
+D:\C_Sharp\HMS-Project\HMS\bin\Debug\System.Security.Principal.Windows.dll
+D:\C_Sharp\HMS-Project\HMS\bin\Debug\Microsoft.Win32.Registry.xml
+D:\C_Sharp\HMS-Project\HMS\bin\Debug\System.Security.AccessControl.xml
+D:\C_Sharp\HMS-Project\HMS\bin\Debug\System.Security.Principal.Windows.xml
+D:\C_Sharp\HMS-Project\HMS\obj\Debug\HMS.csproj.ResolveComReference.cache

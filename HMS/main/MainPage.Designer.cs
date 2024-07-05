@@ -41,15 +41,22 @@
             this.timeSettingsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.currentUserInfoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.changePasswordToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.sendEmailToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.sendImailToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.changeWallpaperToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.removeHomeWallpaperToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.applicationArchitectureToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.signOutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.signOutToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
+            this.pcWallpaper = new System.Windows.Forms.PictureBox();
             this.ctrlCurrencyEchange1 = new HMS.main.ctrlCurrencyEchange();
             this.ctrlMainInfo1 = new HMS.main.Controls.ctrlMainInfo();
             this.ctrlInfo3 = new HMS.Main.ctrlInfo();
             this.ctrlInfo2 = new HMS.Main.ctrlInfo();
             this.ctrlInfo1 = new HMS.Main.ctrlInfo();
             this.menuStrip1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pcWallpaper)).BeginInit();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -107,6 +114,8 @@
             this.timeSettingsToolStripMenuItem,
             this.currentUserInfoToolStripMenuItem,
             this.changePasswordToolStripMenuItem,
+            this.sendEmailToolStripMenuItem,
+            this.applicationArchitectureToolStripMenuItem,
             this.signOutToolStripMenuItem});
             this.settingsToolStripMenuItem.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
             this.settingsToolStripMenuItem.Image = global::HMS.Properties.Resources.gear;
@@ -119,7 +128,7 @@
             // 
             this.floorsToolStripMenuItem.Image = global::HMS.Properties.Resources.merger2;
             this.floorsToolStripMenuItem.Name = "floorsToolStripMenuItem";
-            this.floorsToolStripMenuItem.Size = new System.Drawing.Size(274, 30);
+            this.floorsToolStripMenuItem.Size = new System.Drawing.Size(327, 30);
             this.floorsToolStripMenuItem.Text = "Floors";
             this.floorsToolStripMenuItem.Click += new System.EventHandler(this.floorsToolStripMenuItem_Click);
             // 
@@ -127,7 +136,7 @@
             // 
             this.roomsToolStripMenuItem.Image = global::HMS.Properties.Resources.closet__2_;
             this.roomsToolStripMenuItem.Name = "roomsToolStripMenuItem";
-            this.roomsToolStripMenuItem.Size = new System.Drawing.Size(274, 30);
+            this.roomsToolStripMenuItem.Size = new System.Drawing.Size(327, 30);
             this.roomsToolStripMenuItem.Text = "Rooms";
             this.roomsToolStripMenuItem.Click += new System.EventHandler(this.roomsToolStripMenuItem_Click);
             // 
@@ -135,7 +144,7 @@
             // 
             this.roomTypesToolStripMenuItem.Image = global::HMS.Properties.Resources.closet__3_;
             this.roomTypesToolStripMenuItem.Name = "roomTypesToolStripMenuItem";
-            this.roomTypesToolStripMenuItem.Size = new System.Drawing.Size(274, 30);
+            this.roomTypesToolStripMenuItem.Size = new System.Drawing.Size(327, 30);
             this.roomTypesToolStripMenuItem.Text = "RoomTypes";
             this.roomTypesToolStripMenuItem.Click += new System.EventHandler(this.roomTypesToolStripMenuItem_Click);
             // 
@@ -143,7 +152,7 @@
             // 
             this.staticesToolStripMenuItem.Image = global::HMS.Properties.Resources.stock_market;
             this.staticesToolStripMenuItem.Name = "staticesToolStripMenuItem";
-            this.staticesToolStripMenuItem.Size = new System.Drawing.Size(274, 30);
+            this.staticesToolStripMenuItem.Size = new System.Drawing.Size(327, 30);
             this.staticesToolStripMenuItem.Text = "Statistics";
             this.staticesToolStripMenuItem.Click += new System.EventHandler(this.staticesToolStripMenuItem_Click);
             // 
@@ -151,7 +160,7 @@
             // 
             this.timeSettingsToolStripMenuItem.Image = global::HMS.Properties.Resources.gear;
             this.timeSettingsToolStripMenuItem.Name = "timeSettingsToolStripMenuItem";
-            this.timeSettingsToolStripMenuItem.Size = new System.Drawing.Size(274, 30);
+            this.timeSettingsToolStripMenuItem.Size = new System.Drawing.Size(327, 30);
             this.timeSettingsToolStripMenuItem.Text = "Hotel Settings";
             this.timeSettingsToolStripMenuItem.Click += new System.EventHandler(this.timeSettingsToolStripMenuItem_Click);
             // 
@@ -159,7 +168,7 @@
             // 
             this.currentUserInfoToolStripMenuItem.Image = global::HMS.Properties.Resources.User_32__2;
             this.currentUserInfoToolStripMenuItem.Name = "currentUserInfoToolStripMenuItem";
-            this.currentUserInfoToolStripMenuItem.Size = new System.Drawing.Size(274, 30);
+            this.currentUserInfoToolStripMenuItem.Size = new System.Drawing.Size(327, 30);
             this.currentUserInfoToolStripMenuItem.Text = "Current User Info";
             this.currentUserInfoToolStripMenuItem.Click += new System.EventHandler(this.currentUserInfoToolStripMenuItem_Click);
             // 
@@ -167,16 +176,60 @@
             // 
             this.changePasswordToolStripMenuItem.Image = global::HMS.Properties.Resources.Password_32;
             this.changePasswordToolStripMenuItem.Name = "changePasswordToolStripMenuItem";
-            this.changePasswordToolStripMenuItem.Size = new System.Drawing.Size(274, 30);
+            this.changePasswordToolStripMenuItem.Size = new System.Drawing.Size(327, 30);
             this.changePasswordToolStripMenuItem.Text = "Change Password";
             this.changePasswordToolStripMenuItem.Click += new System.EventHandler(this.changePasswordToolStripMenuItem_Click);
+            // 
+            // sendEmailToolStripMenuItem
+            // 
+            this.sendEmailToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.sendImailToolStripMenuItem,
+            this.changeWallpaperToolStripMenuItem,
+            this.removeHomeWallpaperToolStripMenuItem});
+            this.sendEmailToolStripMenuItem.Image = global::HMS.Properties.Resources.gear;
+            this.sendEmailToolStripMenuItem.Name = "sendEmailToolStripMenuItem";
+            this.sendEmailToolStripMenuItem.Size = new System.Drawing.Size(327, 30);
+            this.sendEmailToolStripMenuItem.Text = "More Option";
+            this.sendEmailToolStripMenuItem.Click += new System.EventHandler(this.sendEmailToolStripMenuItem_Click);
+            // 
+            // sendImailToolStripMenuItem
+            // 
+            this.sendImailToolStripMenuItem.Image = global::HMS.Properties.Resources.send_email_32;
+            this.sendImailToolStripMenuItem.Name = "sendImailToolStripMenuItem";
+            this.sendImailToolStripMenuItem.Size = new System.Drawing.Size(333, 30);
+            this.sendImailToolStripMenuItem.Text = "Send Email";
+            this.sendImailToolStripMenuItem.Click += new System.EventHandler(this.sendImailToolStripMenuItem_Click);
+            // 
+            // changeWallpaperToolStripMenuItem
+            // 
+            this.changeWallpaperToolStripMenuItem.Image = global::HMS.Properties.Resources.Local_32;
+            this.changeWallpaperToolStripMenuItem.Name = "changeWallpaperToolStripMenuItem";
+            this.changeWallpaperToolStripMenuItem.Size = new System.Drawing.Size(333, 30);
+            this.changeWallpaperToolStripMenuItem.Text = "Change home wallpaper";
+            this.changeWallpaperToolStripMenuItem.Click += new System.EventHandler(this.changeWallpaperToolStripMenuItem_Click);
+            // 
+            // removeHomeWallpaperToolStripMenuItem
+            // 
+            this.removeHomeWallpaperToolStripMenuItem.Image = global::HMS.Properties.Resources.closeBlack32;
+            this.removeHomeWallpaperToolStripMenuItem.Name = "removeHomeWallpaperToolStripMenuItem";
+            this.removeHomeWallpaperToolStripMenuItem.Size = new System.Drawing.Size(333, 30);
+            this.removeHomeWallpaperToolStripMenuItem.Text = "Remove home wallpaper";
+            this.removeHomeWallpaperToolStripMenuItem.Click += new System.EventHandler(this.removeHomeWallpaperToolStripMenuItem_Click);
+            // 
+            // applicationArchitectureToolStripMenuItem
+            // 
+            this.applicationArchitectureToolStripMenuItem.Image = global::HMS.Properties.Resources.pencil__1_;
+            this.applicationArchitectureToolStripMenuItem.Name = "applicationArchitectureToolStripMenuItem";
+            this.applicationArchitectureToolStripMenuItem.Size = new System.Drawing.Size(327, 30);
+            this.applicationArchitectureToolStripMenuItem.Text = "Application Architecture";
+            this.applicationArchitectureToolStripMenuItem.Click += new System.EventHandler(this.applicationArchitectureToolStripMenuItem_Click);
             // 
             // signOutToolStripMenuItem
             // 
             this.signOutToolStripMenuItem.Image = global::HMS.Properties.Resources.sign_out_32__2;
             this.signOutToolStripMenuItem.Name = "signOutToolStripMenuItem";
-            this.signOutToolStripMenuItem.Size = new System.Drawing.Size(274, 30);
-            this.signOutToolStripMenuItem.Text = "Sign out";
+            this.signOutToolStripMenuItem.Size = new System.Drawing.Size(327, 30);
+            this.signOutToolStripMenuItem.Text = "Sign out ";
             this.signOutToolStripMenuItem.Click += new System.EventHandler(this.signOutToolStripMenuItem_Click);
             // 
             // signOutToolStripMenuItem1
@@ -192,6 +245,16 @@
             // openFileDialog1
             // 
             this.openFileDialog1.FileName = "openFileDialog1";
+            // 
+            // pcWallpaper
+            // 
+            this.pcWallpaper.Image = global::HMS.Properties.Resources.NewPic;
+            this.pcWallpaper.Location = new System.Drawing.Point(0, 115);
+            this.pcWallpaper.Name = "pcWallpaper";
+            this.pcWallpaper.Size = new System.Drawing.Size(1920, 1080);
+            this.pcWallpaper.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pcWallpaper.TabIndex = 5;
+            this.pcWallpaper.TabStop = false;
             // 
             // ctrlCurrencyEchange1
             // 
@@ -262,6 +325,7 @@
             this.Controls.Add(this.ctrlInfo2);
             this.Controls.Add(this.ctrlInfo1);
             this.Controls.Add(this.menuStrip1);
+            this.Controls.Add(this.pcWallpaper);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "MainPage";
@@ -270,6 +334,7 @@
             this.Load += new System.EventHandler(this.MainPage_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pcWallpaper)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -297,6 +362,12 @@
         private System.Windows.Forms.ToolStripMenuItem currentUserInfoToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem staticesToolStripMenuItem;
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
+        private System.Windows.Forms.ToolStripMenuItem applicationArchitectureToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem sendEmailToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem sendImailToolStripMenuItem;
+        private System.Windows.Forms.PictureBox pcWallpaper;
+        private System.Windows.Forms.ToolStripMenuItem changeWallpaperToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem removeHomeWallpaperToolStripMenuItem;
     }
 }
 

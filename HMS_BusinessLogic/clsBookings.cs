@@ -1,4 +1,5 @@
 ﻿using DVLD_Buisness;
+using HMS_BusinessLogic;
 using HMS_DataAccess;
 using System;
 using System.Collections.Generic;
@@ -7,9 +8,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace HMS_BusinessLogic
-{
-    public class clsBookings
+
+    public  class clsBookings
     {
         enum enMode { AddNewBookings, UpdateBookings };
         public int BookID { get; set; }
@@ -118,41 +118,20 @@ namespace HMS_BusinessLogic
                 return null;
         }
 
-        bool AddNewBook()
+        private  bool AddNewBook()
         {
-            this.BookID = clsBookingData.AddNew( RoomID, ArriveDate, DepartureDate,
-            BookType,(byte) enStatus.eNew, BookingPrice, GuestID, EmployeeID);
-
+            this.BookID = clsBookingData.AddNew(RoomID, ArriveDate, DepartureDate,
+            BookType, (byte)enStatus.eNew, BookingPrice, GuestID, EmployeeID);
+        
             return BookID != -1;
         }
-
-        bool UpdateBook()
+        
+        private  bool UpdateBook()
         {
             return clsBookingData.Update(BookID, RoomID, ArriveDate, DepartureDate,
-            BookType,(byte) Status, BookingPrice, GuestID, EmployeeID);
+            BookType, (byte)Status, BookingPrice, GuestID, EmployeeID);
         }
-
-        public static bool DeleteBook(int BookID)
-        {
-            return clsBookingData.Delete(BookID);
-        }
-
-        public static bool Cancel(int BookID)
-        {
-            return clsBookingData.Cancel(BookID);
-        }
-
-        public  bool SignOut()
-        {
-            return clsBookingData.SignOut(RoomID);
-        }
-
-        public static DataTable GetAllBookings(short pageNumbr, short rowsByPage)
-        {
-            return clsBookingData.GetAllBookings(pageNumbr,rowsByPage);
-        }
-
-        public bool Save()
+       public bool Save()
         {
            
             switch (_Mode)
@@ -174,6 +153,26 @@ namespace HMS_BusinessLogic
             return false;
         }
 
+        public static bool DeleteBook(int BookID)
+        {
+            return clsBookingData.Delete(BookID);
+        }
+       
+        public static bool Cancel(int BookID)
+        {
+            return clsBookingData.Cancel(BookID);
+        }
+       
+        public bool SignOut()
+        {
+            return clsBookingData.SignOut(RoomID);
+        }
+       
+        public static DataTable GetAllBookings(short pageNumbr, short rowsByPage)
+        {
+            return clsBookingData.GetAllBookings(pageNumbr, rowsByPage);
+        }
 
-    }
+
 }
+
