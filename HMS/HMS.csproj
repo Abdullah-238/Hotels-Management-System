@@ -243,6 +243,12 @@
     <Compile Include="Users\Controls\ctrlUserInfo.Designer.cs">
       <DependentUpon>ctrlUserInfo.cs</DependentUpon>
     </Compile>
+    <Compile Include="Users\Controls\UsersList.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Users\Controls\UsersList.Designer.cs">
+      <DependentUpon>UsersList.cs</DependentUpon>
+    </Compile>
     <Compile Include="Users\frmAddNewUser.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -356,6 +362,9 @@
     <EmbeddedResource Include="Users\Controls\ctrlUserInfo.resx">
       <DependentUpon>ctrlUserInfo.cs</DependentUpon>
       <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Users\Controls\UsersList.resx">
+      <DependentUpon>UsersList.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Users\frmAddNewUser.resx">
       <DependentUpon>frmAddNewUser.cs</DependentUpon>

@@ -93,3 +93,4 @@ D:\C_Sharp\HMS-Project\HMS\bin\Debug\Microsoft.Win32.Registry.xml
 D:\C_Sharp\HMS-Project\HMS\bin\Debug\System.Security.AccessControl.xml
 D:\C_Sharp\HMS-Project\HMS\bin\Debug\System.Security.Principal.Windows.xml
 D:\C_Sharp\HMS-Project\HMS\obj\Debug\HMS.csproj.ResolveComReference.cache
+D:\C_Sharp\HMS-Project\HMS\obj\Debug\HMS.Users.Controls.UsersList.resources

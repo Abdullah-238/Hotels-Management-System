@@ -1,7 +1,16 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "D:\\C_Sharp\\HMS-Project\\HMS\\",
-  "Documents": [],
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{34D4B74F-F1D1-4A5B-9919-AB316BF8DE38}|HMS.csproj|d:\\c_sharp\\hms-project\\hms\\users\\controls\\userslist.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{34D4B74F-F1D1-4A5B-9919-AB316BF8DE38}|HMS.csproj|solutionrelative:users\\controls\\userslist.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{34D4B74F-F1D1-4A5B-9919-AB316BF8DE38}|HMS.csproj|D:\\C_Sharp\\HMS-Project\\HMS\\users\\controls\\userslist.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{34D4B74F-F1D1-4A5B-9919-AB316BF8DE38}|HMS.csproj|solutionrelative:users\\controls\\userslist.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
@@ -9,11 +18,35 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": -1,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{b1e99781-ab81-11d0-b683-00aa00a3ee26}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "UsersList.cs",
+              "DocumentMoniker": "D:\\C_Sharp\\HMS-Project\\HMS\\Users\\Controls\\UsersList.cs",
+              "RelativeDocumentMoniker": "Users\\Controls\\UsersList.cs",
+              "ToolTip": "D:\\C_Sharp\\HMS-Project\\HMS\\Users\\Controls\\UsersList.cs",
+              "RelativeToolTip": "Users\\Controls\\UsersList.cs",
+              "ViewState": "AQIAAAcAAAAAAAAAAAAAABMAAAA2AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-16T12:37:52.088Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "UsersList.cs [Design]",
+              "DocumentMoniker": "D:\\C_Sharp\\HMS-Project\\HMS\\Users\\Controls\\UsersList.cs",
+              "RelativeDocumentMoniker": "Users\\Controls\\UsersList.cs",
+              "ToolTip": "D:\\C_Sharp\\HMS-Project\\HMS\\Users\\Controls\\UsersList.cs [Design]",
+              "RelativeToolTip": "Users\\Controls\\UsersList.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-16T12:37:16.173Z"
             }
           ]
         }

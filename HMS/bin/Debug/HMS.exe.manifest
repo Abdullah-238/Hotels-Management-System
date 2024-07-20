@@ -42,14 +42,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="HMS.exe" size="573888">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="HMS.exe" size="575424">
       <assemblyIdentity name="HMS" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>eKMxI77ScrUJqj5IGMckdQighVF59A7hmuDV7xuGxa0=</dsig:DigestValue>
+        <dsig:DigestValue>O9IzDJcuByhBtUgc+15m6rIsVo9A6yRlyOfeuE0z66o=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

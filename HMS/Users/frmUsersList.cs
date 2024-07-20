@@ -13,6 +13,7 @@ namespace HMS.Users
 {
     public partial class frmUsersList : Form
     {
+
         static DataTable _dtAllUsers = clsUsers.GetAllUsers();
 
         static DataTable _dtUsers =
@@ -83,6 +84,8 @@ namespace HMS.Users
 
         private void txtFilterValue_TextChanged(object sender, EventArgs e)
         {
+           
+
             string FilterValue = "";
 
             switch (cbFilterBy.SelectedItem)
@@ -120,6 +123,7 @@ namespace HMS.Users
 
             lblRecordsCount.Text = dgvUsers.RowCount.ToString();
         }
+        
 
         private void txtFilterValue_KeyPress(object sender, KeyPressEventArgs e)
         {
@@ -229,6 +233,7 @@ namespace HMS.Users
 
             ChangePassword.ShowDialog();
         }
+
     }
 
 }
