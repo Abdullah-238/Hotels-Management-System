@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HMS_BusinessLogic", "..\HMS
 EndProject
 Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "HMS-Setup", "..\HMS-Setup\HMS-Setup.vdproj", "{94744536-515E-4492-BB8F-DB77B4EC71FC}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HMS_API", "..\HMS_API\HMS_API.csproj", "{7847F849-B481-41EE-AABA-13CA51371DB8}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -31,6 +33,10 @@ Global
 		{907AB271-70DB-4D33-8FF8-0D618D95B57E}.Release|Any CPU.Build.0 = Release|Any CPU
 		{94744536-515E-4492-BB8F-DB77B4EC71FC}.Debug|Any CPU.ActiveCfg = Debug
 		{94744536-515E-4492-BB8F-DB77B4EC71FC}.Release|Any CPU.ActiveCfg = Release
+		{7847F849-B481-41EE-AABA-13CA51371DB8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7847F849-B481-41EE-AABA-13CA51371DB8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7847F849-B481-41EE-AABA-13CA51371DB8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7847F849-B481-41EE-AABA-13CA51371DB8}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

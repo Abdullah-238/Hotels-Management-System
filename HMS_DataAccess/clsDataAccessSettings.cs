@@ -10,11 +10,12 @@ namespace HMS_DataAccess
     public class clsDataAccessSettings
     {
 
-            public static string ConnectionString 
-            = ConfigurationManager.ConnectionStrings["ConnectionString"].ConnectionString;
+        public static string ConnectionString
+        = "Server=.;DataBase=HotelsManagementSystem;User Id=sa;Password=sa123456; Encrypt=False;TrustServerCertificate=True ";
 
 
-        /*"Server=.;DataBase=HotelsManagementSystem;User Id=sa;Password=sa123456";*/
 
+
+        //ConfigurationManager.ConnectionStrings["ConnectionString"].ConnectionString;
     }
 }

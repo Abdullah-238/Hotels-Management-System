@@ -1,16 +1,74 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Data.SqlClient;
 using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Net;
+using Microsoft.Data.SqlClient;
+
 
 namespace HMS_DataAccess
 {
+    public class BookingsDTO
+    {
+        public int BookID { get; set; }
+        public int RoomID { get; set; }
+        public DateTime ArriveDate { get; set; }
+        public DateTime DepartureDate { get; set; }
+
+        public BookingsDTO(int bookID, int roomID, DateTime arriveDate, DateTime departureDate)
+        {
+            BookID = bookID;
+            RoomID = roomID;
+            ArriveDate = arriveDate;
+            DepartureDate = departureDate;
+        }
+    }
+
+
     public class clsBookingData
     {
+
+        public static List<BookingsDTO> GetAllBookingsShort()
+        {
+            var studentList = new List<BookingsDTO>();
+
+            try
+            {
+
+                using (SqlConnection conn = new SqlConnection(clsDataAccessSettings.ConnectionString))
+                {
+                    using (SqlCommand cmd = new SqlCommand("SP_GetAllBookings", conn))
+                    {
+                        cmd.CommandType = System.Data.CommandType.StoredProcedure;
+
+                        conn.Open();
+
+                        using (SqlDataReader reader = cmd.ExecuteReader())
+                        {
+                            while (reader.Read())
+                            {
+                                studentList.Add(new BookingsDTO
+                                (
+                                   reader.GetInt32(reader.GetOrdinal("BookID")),
+                                    reader.GetInt32(reader.GetOrdinal("RoomID")),
+                                    reader.GetDateTime(reader.GetOrdinal("ArriveDate")),
+                                    reader.GetDateTime(reader.GetOrdinal("DepartureDate"))
+                                ));
+                            }
+                        }
+                    }
+                }
+
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
+            return studentList;
+        }
+
 
         public static DataTable GetAllBookings(short pageNumbr , short rowsByPage)
         {

@@ -100,6 +100,10 @@ namespace HMS_BusinessLogic
             return clsRoomTypesData.GetAllRoomTypes();
         }
 
+        public static List<DTORoomType> GetAllRoomsTypeDTO()
+        {
+            return clsRoomTypesData.GetAllRoomsTypeDTO();
+        }
 
     }
 }

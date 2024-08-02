@@ -173,6 +173,13 @@ using System.Threading.Tasks;
             return clsBookingData.GetAllBookings(pageNumbr, rowsByPage);
         }
 
+        public static List<BookingsDTO> GetAllBookings()
+        {
+            return clsBookingData.GetAllBookingsShort();
+        }
+
+
+   
 
 }
 

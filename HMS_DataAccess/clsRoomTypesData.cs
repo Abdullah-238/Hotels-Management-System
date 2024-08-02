@@ -1,6 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Data.SqlClient;
+using Microsoft.Data.SqlClient;
 using System.Data;
 using System.Linq;
 using System.Text;
@@ -8,8 +8,61 @@ using System.Threading.Tasks;
 
 namespace HMS_DataAccess
 {
+
+    public class DTORoomType
+    {
+        public int RoomTypeID { get; set; }
+
+        public string RoomTypeName { get; set; }
+
+
+        public DTORoomType(int roomTypeID, string roomTypeName)
+        {
+            this.RoomTypeID = roomTypeID;
+            this.RoomTypeName = roomTypeName;
+        }
+    }
+
     public class clsRoomTypesData
     {
+      
+        public static List<DTORoomType> GetAllRoomsTypeDTO()
+        {
+            var AllRoomsType = new List<DTORoomType>();
+
+            try
+            {
+
+                using (SqlConnection Connection = new SqlConnection(clsDataAccessSettings.ConnectionString))
+                {
+                    Connection.Open();
+
+                    string query = @"select * from RoomTypes";
+
+                    using (SqlCommand Command = new SqlCommand(query, Connection))
+                    {
+                        using (SqlDataReader reader = Command.ExecuteReader())
+                        {
+                            while (reader.Read())
+                            {
+                                AllRoomsType.Add(new DTORoomType
+                                (
+                                    reader.GetInt32(reader.GetOrdinal("RoomTypeID")),
+                                    reader.GetString(reader.GetOrdinal("RoomTypeName"))
+                                ));
+                            }
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
+
+            return AllRoomsType;
+        }
+
 
         public static int AddNew(string RoomTypeName)
         {
